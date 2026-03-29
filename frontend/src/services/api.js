@@ -1,9 +1,7 @@
 import axios from "axios";
 
 // ✅ Use ENV if available, otherwise fallback (VERY IMPORTANT)
-const BASE_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://campustick-backend.onrender.com/api";
+const BASE_URL ="https://campustick-backend.onrender.com/api";
 
 console.log("API URL:", BASE_URL);
 
