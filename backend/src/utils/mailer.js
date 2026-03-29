@@ -10,6 +10,8 @@ const transporter = nodemailer.createTransport({
 });
 
 // Verify connection on startup (logs warning if credentials are wrong)
+console.log("MAIL USER:", process.env.MAIL_USER);
+console.log("MAIL PASS:", process.env.MAIL_PASS ? "EXISTS" : "MISSING");
 transporter.verify((err) => {
   if (err) console.warn("⚠️  Mailer not connected:", err.message);
   else     console.log("✅  Mailer ready:", process.env.MAIL_USER);
