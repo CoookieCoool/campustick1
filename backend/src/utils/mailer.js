@@ -1,23 +1,43 @@
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
-// Create reusable transporter
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
-});
+// // Create reusable transporter
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   secure: false,
+//   auth: {
+//     user: process.env.MAIL_USER,
+//     pass: process.env.MAIL_PASS,
+//   },
+// });
 
-// Verify connection on startup (logs warning if credentials are wrong)
-console.log("MAIL USER:", process.env.MAIL_USER);
-console.log("MAIL PASS:", process.env.MAIL_PASS ? "EXISTS" : "MISSING");
-transporter.verify((err) => {
-  if (err) console.warn("⚠️  Mailer not connected:", err.message);
-  else     console.log("✅  Mailer ready:", process.env.MAIL_USER);
-});
+// // Verify connection on startup (logs warning if credentials are wrong)
+// console.log("MAIL USER:", process.env.MAIL_USER);
+// console.log("MAIL PASS:", process.env.MAIL_PASS ? "EXISTS" : "MISSING");
+// transporter.verify((err) => {
+//   if (err) console.warn("⚠️  Mailer not connected:", err.message);
+//   else     console.log("✅  Mailer ready:", process.env.MAIL_USER);
+// });
+
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export const sendBookingConfirmation = async ({ to, studentName, event, ticket }) => {
+  try {
+    await resend.emails.send({
+      from: "CampusTick <onboarding@resend.dev>",
+      to: [to],
+      subject: "🎟️ Booking Confirmed",
+      html: `<h2>Hello ${studentName}</h2>
+             <p>Your ticket is confirmed for ${event.title}</p>`,
+    });
+
+    console.log("✅ Email sent");
+  } catch (err) {
+    console.error("❌ Email error:", err);
+  }
+};
 
 // Send booking confirmation email with QR code embedded
 const sendBookingConfirmation = async ({ to, studentName, event, ticket }) => {
