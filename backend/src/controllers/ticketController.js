@@ -56,15 +56,16 @@ const createTicketsForEvent = async ({ eventId, user, quantity = 1 }) => {
     .populate("event", "title date venue price");
 
   // 7. Send confirmation email — fire and forget
-  sendBookingConfirmation({
-    to:          user.email,
-    studentName: user.name,
-    event,
-    ticket:      tickets[0],
-  }).catch((err) => console.warn("Email failed:", err.message));
+console.log("🔥 calling email function");
 
-  return qty === 1 ? populated[0] : populated;
-};
+await sendBookingConfirmation({
+  to: user.email,
+  studentName: user.name,
+  event,
+  ticket: tickets[0],
+});
+
+console.log("✅ email function finished");
 
 // @desc   Book a ticket for an event (direct — free events and legacy path)
 // @route  POST /api/tickets/book/:eventId
