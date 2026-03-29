@@ -38,7 +38,7 @@ export const sendBookingConfirmation = async ({
 
     await resend.emails.send({
       from: "CampusTick <onboarding@resend.dev>",
-      to: [to],
+      to: ["802subhambehera@gmail.com"],
       subject: `🎟 Booking Confirmed — ${event?.title || "Your Event"}`,
       html,
     });
