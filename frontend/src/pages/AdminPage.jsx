@@ -73,10 +73,10 @@ export default function AdminPage() {
 
       {/* Stats bar */}
       <div style={styles.statsRow}>
-        <StatPill label="Total Users"  value={users.length}      color="#1a1a2e" />
-        <StatPill label="Students"     value={students.length}   color="#1e40af" />
-        <StatPill label="Organizers"   value={organizers.length} color="#166534" />
-        <StatPill label="Admins"       value={admins.length}     color="#92400e" />
+        <StatPill label="Total Users"  value={users.length}      color="#b8ec2a" />
+        <StatPill label="Students"     value={students.length}   color="#0c41ee" />
+        <StatPill label="Organizers"   value={organizers.length} color="#f20f63" />
+        <StatPill label="Admins"       value={admins.length}     color="#0ddccb" />
       </div>
 
       {error  && <div style={styles.error}>{error}</div>}
@@ -150,18 +150,18 @@ function StatPill({ label, value, color }) {
 
 const styles = {
   container:  { maxWidth: "900px", margin: "2rem auto", padding: "0 1rem" },
-  sub:        { color: "#666", fontSize: "0.9rem", margin: "0 0 1.5rem" },
+  sub:        { color: "#94a3b8", fontSize: "0.9rem", margin: "0 0 1.5rem" },
   statsRow:   { display: "flex", gap: "1rem", flexWrap: "wrap", marginBottom: "1.5rem" },
   pill:       { flex: "1 1 120px", border: "2px solid", borderRadius: "10px", padding: "0.9rem 1rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.2rem" },
   pillNum:    { fontSize: "1.6rem", fontWeight: "700" },
-  pillLabel:  { fontSize: "0.8rem", color: "#555" },
+  pillLabel:  { fontSize: "0.8rem", color: "#94a3b8" },
   error:      { background: "#fff0f0", color: "#c0392b", padding: "0.6rem 0.8rem", borderRadius: "6px", marginBottom: "1rem" },
-  tableWrap:  { overflowX: "auto", border: "1px solid #e2e8f0", borderRadius: "10px" },
+  tableWrap:  { overflowX: "auto", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "10px" },
   table:      { width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" },
-  thead:      { background: "#f8fafc" },
-  th:         { padding: "0.75rem 1rem", textAlign: "left", fontWeight: "600", color: "#444", borderBottom: "1px solid #e2e8f0" },
-  tr:         { borderBottom: "1px solid #f1f5f9" },
-  td:         { padding: "0.75rem 1rem", color: "#333", verticalAlign: "middle" },
+  thead:      { background: "rgba(255,255,255,0.05)" },
+  th:         { padding: "0.75rem 1rem", textAlign: "left", fontWeight: "600", color: "#94a3b8", borderBottom: "1px solid rgba(255,255,255,0.08)" },
+  tr:         { borderBottom: "1px solid rgba(255,255,255,0.05)" },
+  td:         { padding: "0.75rem 1rem", color: "#e5e7eb", verticalAlign: "middle" },
   badge:      { padding: "0.25rem 0.6rem", borderRadius: "20px", fontSize: "0.78rem", fontWeight: "600" },
   promoteBtn: { padding: "0.35rem 0.8rem", background: "#1a1a2e", color: "#fff", border: "none", borderRadius: "5px", cursor: "pointer", fontSize: "0.82rem", fontWeight: "600" },
   demoteBtn:  { padding: "0.35rem 0.8rem", background: "#fff0f0", color: "#c0392b", border: "1px solid #fca5a5", borderRadius: "5px", cursor: "pointer", fontSize: "0.82rem" },
