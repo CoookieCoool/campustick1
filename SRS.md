@@ -1,7 +1,7 @@
 `<div align="center">
   <h3>CampusTick: Event tickting and management | SRS v1.0 | CVR Global University, CSE | March 2026</h3>
   <hr />
-  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/C_V_Raman_Global_University_Logo.svg/1200px-C_V_Raman_Global_University_Logo.svg.png" width="100" height="auto" alt="CVRGU Logo" />
+  <img src="https://upload.wikimedia.org/wikipedia/en/6/6a/C._V._Raman_Global_University_Logo.png" width="100" height="auto" alt="CVRGU Logo" />
   <h2>C.V. RAMAN GLOBAL UNIVERSITY</h2>
   <p>Department of Computer Science & Engineering<br/><em>Bhubaneswar, Odisha — Academic Year 2025-26</em></p>
 
