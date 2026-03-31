@@ -30,11 +30,11 @@
 
 | S.No. | Name | Registration No. |
 | :---: | :--- | :---: |
-| **1.** | Sai Suman Samantaray | 2301020565 |
-| **2.** | Suvrajit Senapati | — |
-| **3.** | Sanjay Kumar Sahoo | — |
-| **4.** | Satya Spandan Rout | — |
-| **5.** | Rohan Anand | — |
+| **1.** | Raj Ratan Panigrahi | 2301020351 |
+| **2.** | Charan Dipak Sahu | 2301020407 |
+| **3.** | Ayushman Nayak | 2301020191 |
+| **4.** | Jayprakash Sahu | 2301020079 |
+| **5.** | Subham Behera | 2301020099 |
 
 <hr/>
 
