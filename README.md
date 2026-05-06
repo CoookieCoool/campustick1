@@ -67,6 +67,8 @@ The frontend will typically run at `http://localhost:5173`.
 - **Students**: Create an account, browse the dashboard for upcoming events, book your spot, and present the generated QR code at the event venue.
 - **Organizers**: Register as an organizer (or get promoted), create new events, define seat capacities, and use the built-in scanner to validate student tickets in real-time.
 
+- *Live Link*: `https://campustick.vercel.app/`
+
 ## 🎓 Academic Context
 This project was developed by B.Tech (CSE) 6th-semester students at **C.V. Raman Global University, Bhubaneswar**, for the Academic Year 2025-26.
 
